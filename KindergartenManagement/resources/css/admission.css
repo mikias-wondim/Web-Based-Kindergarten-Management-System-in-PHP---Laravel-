@@ -1,0 +1,141 @@
+/* Add the attractive styling here */
+
+section.admission-form form {
+
+}
+
+.form-display {
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #faf4b6, rgba(255, 230, 167, 0.7));
+
+}
+
+div.admission-form {
+  max-width: 500px;
+  min-width: 350px;
+  height: fit-content;
+  padding: 30px 30px 10px;
+  margin: 10px auto;
+}
+
+div.admission-form .form-header {
+  color: #ff6b81;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+section.admission-form .form-group {
+  margin-bottom: 20px;
+}
+
+section.admission-form label {
+  display: block;
+  font-weight: bold;
+  color: var(--dark);
+  font-size: 14px;
+}
+
+section.admission-form input[type="text"],
+section.admission-form input[type="email"],
+section.admission-form input[type="tel"],
+section.admission-form input[type="date"],
+section.admission-form textarea,
+section.admission-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  color: #555;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+section.admission-form input[type="text"]:focus,
+section.admission-form input[type="email"]:focus,
+section.admission-form input[type="tel"]:focus,
+section.admission-form input[type="date"]:focus,
+section.admission-form textarea:focus,
+section.admission-form select:focus {
+  border-color: #9aff6b;
+}
+
+section.admission-form textarea {
+  resize: vertical;
+  height: 70px;
+}
+
+section.admission-form .radio-group {
+  display: flex;
+  align-items: center;
+}
+
+section.admission-form .radio-group label {
+  margin-right: 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Create custom toggle */
+.radio-group label {
+  position: relative;
+  padding: 0 40px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.radio-group label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* Handle radio button checked state */
+input[type="radio"]:checked + label:before {
+  background-color: #ff6b81;
+}
+
+.radio-group label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+/* Handle radio button checked state and show the toggle */
+input[type="radio"]:checked + label:after {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 767px) {
+  section.admission-form form {
+    flex-direction: column;
+  }
+}
